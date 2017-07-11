@@ -1,0 +1,579 @@
+*{
+	margin:0;
+	padding: 0;
+}
+.gameSpot2{
+	position:relative;
+	height:480px;
+	width:640px;
+	margin:50px auto;
+	background-image: radial-gradient(#30579f 0%,#2c497f 30%,#273b61 70%);
+	border-radius: 1em;
+	display: block;
+}
+.winorlose{
+	position: absolute;
+	left:60px;
+	top:10px;
+	color:white;
+	width:150px;
+	height: 30px;
+	font-size: 20px;
+	writing-mode:lr-tb;
+}
+.message1{
+	position: absolute;
+	left: 250px;
+	top:10px;
+	color:white;
+	width:150px;
+	height: 30px;
+	font-size: 20px;
+	writing-mode:lr-tb;
+}
+.message2{
+	position: absolute;
+	left: 420px;
+	top:10px;
+	color:white;
+	width:150px;
+	height: 30px;
+	font-size: 20px;
+	writing-mode:lr-tb;
+}
+.ai1,.ai2{
+	height: 40px;
+	width: 40px;
+}
+.ai1-main{
+	float: left;
+	left: 17px;
+	margin:114px 0 0 20px;
+	width:100px;
+}
+.ai1{
+	float: left;
+	background-image: url(../images/portrait/ai1.png);
+	background-size:40px 40px;
+	border-radius:0.15em;
+}
+
+.ai1-name{
+	float: left;
+	margin-left:10px;
+	color:#E0FFFF;
+	font-weight: 500;	
+}
+.ai1-money{
+	position: relative;
+	left:5px;
+	padding-top: 3px;
+	color:#E0FFFF;
+	font-weight: 500;
+}
+.ai1-cards{
+	position: relative;
+	clear: both;
+	top:15px;
+	width:140px;
+	height: 93px;
+	display: none;
+}
+.ai1-card1{
+	position: absolute;
+	float: left;
+	left:249px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index:1;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.ai1-card2{
+	position: absolute;
+	float: left;
+	left:249px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index: 2;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.ai1-card3{
+	position: absolute;
+	float: left;
+	left:249px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index: 3;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.ai1-game-message{
+	position: absolute;
+	float: left;
+	top:60px;
+	left:130px;
+	color: #ADFF2F;
+	font-size: 30px;
+	font-weight: 900;
+	width: 100px;
+	z-index: 4;
+	display: none;
+}
+.ai1-chip{
+	position: absolute;
+	float: left;
+	top:0px;
+	left:60px;  
+	width:42px;
+	height: 35px;
+	background-image: url("../images/chip/10W.png");
+	background-repeat: no-repeat;
+	display: none;
+}
+.ai1-game-symbol{
+	position:absolute;
+	top:60px;
+	left:95px; 
+	width:37px;
+	height: 37px;
+	z-index:5;
+	background-image: url(../images/circle/dark.png);
+	background-repeat: no-repeat;
+	display: none;
+}
+.compare-txt1{
+	position: absolute;
+	float: left;
+	font-size:40px;
+	font-weight: 800;
+	top:25px;
+	left:25px;
+	color:#DC143C;
+	z-index:4;
+	display: none;
+}
+.ai2-main{
+	margin:114px 100px 0 0;
+	float: right;
+	top:114px;
+	width:100px;
+}
+.ai2{
+	float: left;
+	background-image: url(../images/portrait/ai2.png);
+	background-size:40px 40px;
+	border-radius:0.15em;
+}
+.ai2-name{
+	float: left;
+	margin-left:10px;
+	color:#E0FFFF;
+	font-weight: 500;
+}
+.ai2-money{
+	position: relative;
+	left:5px;
+	padding-top: 3px;
+	color:#E0FFFF;
+	font-weight: 500;
+}
+.ai2-cards{
+	position: relative;
+	clear: both;
+	top:15px;
+	width:140px;
+	height: 93px;
+	display: none;
+}
+.ai2-card1{
+	position: absolute;
+	float: left;
+	background-image: url(../images/back.png);
+	left:-172px;
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index:1;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.ai2-card2{
+	position: absolute;
+	float: left;
+	left:-172px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index: 2;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.ai2-card3{
+	position: absolute;
+	float: left;
+	left:-172px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index: 3;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.ai2-game-message{
+	position: absolute;
+	float: left;
+	top:60px;
+	left:130px;
+	color: #ADFF2F;
+	font-size: 30px;
+	font-weight: 900;
+	width: 100px;
+	z-index: 4;
+	display: none;
+}
+.ai2-chip{
+	position: absolute;
+	float: left;
+	top:0px;
+	left:60px;  
+	width:42px;
+	height: 35px;
+	background-image: url("../images/chip/10W.png");
+	background-repeat: no-repeat;
+	display: none;
+}
+.ai2-game-symbol{
+	position:absolute;
+	top:60px;
+	left:95px; 
+	width:37px;
+	height: 37px;
+	z-index:5;
+	background-image: url(../images/circle/dark.png);
+	background-repeat: no-repeat;
+	display: none;
+}
+.compare-txt2{
+	position: absolute;
+	float: left;
+	font-size:40px;
+	font-weight: 800;
+	top:25px;
+	left:25px;
+	color:#DC143C;
+	z-index:4;
+	display: none;
+}
+.scoreboard{
+	position: absolute;
+	top:150px;
+	left:170px;
+	width:240px;
+	height:170px;
+	z-index: 3;
+	background-image: url(../images/other/signback.png);
+	background-size: 240px 170px;
+	display: block;
+	border-radius: 0.5em;
+	display: none;
+}
+.scoreboard ul{
+	position: absolute;
+	top:25px;
+	left:30px;
+}
+.scoreboard ul li{
+	list-style-type: none;
+	width: 175px;
+	background-color: #f6e6b3;
+	border-radius: 0.3em;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+.scoreboard ul li span.span2{
+	position: absolute;
+	left:80px;
+}
+.scoreboard ul li span.span3{
+	position: absolute;
+	left:135px;
+}
+.scoreboard-exit{
+	position: relative;
+	top:5px;
+	left:220px;
+	width:15px;
+	height: 15px;
+	background-image: url("../images/chip/exit.png");
+	cursor: pointer;
+}
+.alert-message{
+	position: absolute;
+	top:130px;
+	left:270px;
+	width: 80px;
+	height: 50px;
+	color:#B22222;
+	font-size: 30px;
+	font-weight: 900;
+	display: none;
+	-webkit-text-stroke: 1px #ccc;
+}
+.in-total-message{
+	position: absolute;
+	top:130px;
+	left:240px;
+	width: 120px;
+	height: 100px;
+	color:#B22222;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	opacity: 0.6;
+	display: none;
+}
+.in-total-message div{
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+}
+.control-bar{
+	position: relative;
+	top:320px;
+	left:60px;
+	float: left;
+	width:290px;
+	height:40px;
+	z-index: 5;
+}
+.person-clock{
+	position: absolute;
+	top:-80px;
+	left:100px;
+	width:45px;
+	height:43px;
+	text-align: center;
+	line-height: 43px;
+	background-image: url(../images/other/clock.png);
+	display: none;
+}
+.person-clock span{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 800;
+	margin-right: 2px;
+	color:#ADFF2F;
+}
+.start-button{
+	position: absolute;
+	top:5px;
+	left:90px;
+	text-align: center;
+	padding: 2px 5px;
+	line-height: 20px;
+	font-weight: 900;
+	color:#0606ff;
+	background: -moz-linear-gradient(top, #92cae6, #0777ad);
+	background: -o-linear-gradient(top,#92cae6, #0777ad);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#92cae6), to(#0777ad));
+	border-radius: 0.2em;
+	cursor: pointer;
+	border: none;
+	font-size: 15px;
+}
+.button-list{
+	width: 280px;
+	height: 20px;
+	display: none;
+}
+.button-list ul{
+	margin-top:5px;
+}
+.button-list ul li{
+	list-style-type: none;
+	float: left;
+	height: 20px;
+	font-weight: 900;
+	color:#0606ff;
+	background: -moz-linear-gradient(top, #92cae6, #0777ad);
+	background: -o-linear-gradient(top,#92cae6, #0777ad);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#92cae6), to(#0777ad));
+	border-radius: 0.2em;
+	cursor: pointer;
+	border: none;
+	padding: 2px 5px;
+	margin-left: 10px;
+	font-size: 15px;
+}
+.chip-ul{
+	width: 280px;
+	height: 35px;
+	display: none;
+}
+.chip-ul ul li{
+	float: left;
+	list-style-type: none;
+	cursor: pointer;
+	margin-left: 10px;
+	line-height: 35px;
+	width:42px;
+	height: 35px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.chip-ul ul li.chip-10w {
+	background-image: url("../images/chip/10W.png");
+}
+.chip-ul ul li.chip-20w {
+	background-image: url("../images/chip/20W.png");4
+}
+.chip-ul ul li.chip-50w {
+	background-image: url("../images/chip/50W.png");
+}
+.chip-ul ul li.chip-100w {
+	background-image: url("../images/chip/100W.png");
+}
+.chip-ul ul li.chip-exit {
+	width:15px;
+	height: 15px;
+	background-image: url("../images/chip/exit.png");
+	margin-left: 20px;
+}
+.give-up-compare{
+	float: left;
+	height: 20px;
+	font-weight: 900;
+	color:#0606ff;
+	background: -moz-linear-gradient(top, #92cae6, #0777ad);
+	background: -o-linear-gradient(top,#92cae6, #0777ad);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#92cae6), to(#0777ad));
+	border-radius: 0.2em;
+	cursor: pointer;
+	border: none;
+	padding: 2px 5px;
+	font-size: 15px;
+	margin-left: 80px;
+	margin-top:5px;
+	display: none;
+}
+.person-main{
+	position: relative;
+	left:182px;
+	top:313px;
+	width: 100px;
+	height: 100px;
+}
+.person{
+	position: absolute;
+	top:60px;
+	background-image: url(../images/portrait/person.png);
+	background-size:40px 40px;
+	border-radius:0.15em;
+	height: 40px;
+	width: 40px;
+}
+.person-name{
+	position: absolute;
+	top:58px;
+	left:40px;
+	margin-left:10px;
+	color:#E0FFFF;
+	font-weight: 500;
+}
+.person-money{
+	position: absolute;
+	top:73px;
+	left:45px;
+	padding-top: 3px;
+	color:#E0FFFF;
+	font-weight: 500;
+}
+.person-cards{
+	display: none;
+}
+.person-card1{
+	position: absolute;
+	float: left;
+	top:-145px;
+	left:88px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index:1;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.person-card2{
+	position: absolute;
+	float: left;
+	top:-145px;
+	left:88px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index:1;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.person-card3{
+	position: absolute;
+	float: left;
+	top:-145px;
+	left:88px;
+	background-image: url(../images/back.png);
+	width:67px;
+	height:93px;
+	background-size:67px 93px;
+	z-index:1;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
+}
+.person-game-message{
+	position: absolute;
+	float: left;
+	top:100px;
+	left:230px;
+	color: #ADFF2F;
+	font-size: 30px;
+	font-weight: 900;
+	width: 100px;
+	z-index: 4;
+	display: none;
+}
+.person-chip{
+	position: absolute;
+	float: left;
+	top:70px;
+	left:120px; 
+	width:42px;
+	height: 35px;
+	background-image: url("../images/chip/10W.png");
+	background-repeat: no-repeat;
+	display: none;
+}
+.person-game-symbol{
+	position:absolute;
+	top:120px;
+	left:190px; 
+	width:37px;
+	height: 37px;
+	z-index:5;
+	background-image: url(../images/circle/dark.png);
+	background-repeat: no-repeat;
+	display: none;
+}
+
